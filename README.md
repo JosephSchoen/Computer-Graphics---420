@@ -37,7 +37,9 @@ In my sophomore year at the University of St. Thomas, I had the opportunity to t
 ### Built With
 
 * JavaScript
-* 
+* GLSL
+* HTML
+* CSS
 
 
 
