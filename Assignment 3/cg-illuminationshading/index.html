@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>3D Illumination and Shading</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script type="application/javascript" src="scripts/gl-matrix-min.js"></script>
+    <script type="application/javascript" src="scripts/glsl.js"></script>
+    <script type="application/javascript" src="scripts/models.js"></script>
+    <script type="application/javascript" src="scripts/illuminate.js"></script>
+    <script type="application/javascript" src="scripts/render.js"></script>
+</head>
+<body onload="init()">
+    <div id="wrapper">
+        <div id="content">
+            <h1>WebGL Shading and Illumination</h1>
+            <canvas id="view"></canvas>
+            <br/>
+            <div class="spacer"></div>
+            <div id="gui">
+                <label for="scene_file">Scene: </label>
+                <input id="scene_file" type="file" onchange="loadNewScene()" />
+                <label for="shading_alg">Shading Algorithm: </label>
+                <select id="shading_alg" @change="selectShadingAlgorithm()">
+                    <option value="gouraud">Gouraud</option>
+                    <option value="phong">Phong</option>
+                </select>
+                <br/>
+                <div class="spacer2"></div>
+                <div id="lights">
+                    <h2>Lights</h2>
+                    <label for="num_lights">Number of Lights: </label>
+                    <select id="num_lights" @change="selectNumLights()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div class="spacer"></div>
+                    <div v-for="(light,index) in light.point_lights">
+                        <label>Color: </label>
+                        <input :id="'light' + index + '_color'" type="color" :value="htmlColor(light.color)" @change="updateLightColor(index)" />
+                        <br/>
+                        <label>Position: </label>
+                        <input :id="'light' + index + '_posx'" class="input_num" type="number" step="0.1" :value="light.position[0]" @change="updateLightPosition(index)" />
+                        <input :id="'light' + index + '_posy'" class="input_num" type="number" step="0.1" :value="light.position[1]" @change="updateLightPosition(index)" />
+                        <input :id="'light' + index + '_posz'" class="input_num" type="number" step="0.1" :value="light.position[2]" @change="updateLightPosition(index)" />
+                        <br/>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
