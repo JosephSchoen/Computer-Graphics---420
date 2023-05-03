@@ -62,7 +62,7 @@ The main usage of this repository is to display the growth and understanding of 
 
 Joseph Schoen - joseph.william.schoen@gmail.com
 
-Project Link: [https://github.com/JosephSchoen/CISC_130](https://github.com/JosephSchoen/CISC_130)
+Project Link: [https://github.com/JosephSchoen/Computer-Graphics---420](https://github.com/JosephSchoen/Computer-Graphics---420)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
