@@ -19,6 +19,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#Assignments">Assignments</a></li>
+    <li><a href="#Contact">Contact</a></li>
 
   </ol>
 </details>
@@ -49,9 +51,12 @@ In my sophomore year at the University of St. Thomas, I had the opportunity to t
 
 The main usage of this repository is to display the growth and understanding of basics to computer graphics at a fundamental level. From creating objects, rendering scenes, and playing around with the lighting, all of this was learned throughout this class and can be shown in these projects.
 
+### Assignments
 
-
-
+* Assignment 1: Line Drawing
+* Assignment 2: 3D Projections
+* Assignment 3: Lighting
+* Assignment 4: Effects
 
 
 
